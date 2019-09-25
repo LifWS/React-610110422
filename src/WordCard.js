@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CharacterCard from './CharacterCard';
 import _ from 'lodash';
+import { thisTypeAnnotation } from '@babel/types';
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
@@ -24,7 +25,9 @@ export default class WordCard extends Component {
         console.log(`${c} has been activated.`)
         let guess = [...this.state.guess, c]
         this.setState({ guess })
+        document.getElementById('input').innerHTML = `${guess.join('').toString()}`
         if (guess.length == this.state.chars.length) {
+            console.log(`${this.state.guess.join('').toString()} ${this.state.chars.join('').toString()}`)
             if (guess.join('').toString() == this.state.chars.join('').toString()) {
                 this.setState({ guess: [], completed: true })
                 document.getElementById('result').innerHTML = `Congratulations! You win`

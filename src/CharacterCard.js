@@ -18,20 +18,23 @@ export default class CharacterCard extends Component {
         if (!this.state.active) {
             this.props.activationHandler(this.props.value)
             this.setState({ active: true })
+            console.log(this.props.value)
         }
 
     }
-
+/*
     getAnswer = () => {
         this.props.getAnswer(this.state.chars.join('').toString());
     }
-
+*/
     render() {
         let className = `card ${this.state.active ? 'activeCard' : ''}`
+        /*
         if (this.props.isSurrenderConfirm) {
             className = 'card activeCard'
             document.getElementsByClassName("card").disabled = true;
         }
+        */
         return (
             <div className={className} onClick={this.activate} >
                 {this.props.value}

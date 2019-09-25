@@ -56,3 +56,20 @@
    color: rgb(241, 12, 12);
    text-align: center;
  }
+
+ .button{
+  text-align: center;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 1em;
+  user-select: none;
+}
+#input{
+  color: darkorange;
+
+}
+#Ans{
+  color: darkorange;
+}

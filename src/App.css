@@ -42,9 +42,13 @@
   user-select: none;
  }
  
+ 
  .activeCard {
   color: red;
   background: pink;
+ }
+ #nod{
+  color: brown ; 
  }
 
  .mystyle1 {

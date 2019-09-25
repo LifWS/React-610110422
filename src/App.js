@@ -1,11 +1,30 @@
+
 import React, { Component } from 'react';
-import WordCard from './WordCard';
 import './App.css';
-const word = "Hello";
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
+/*
+import WordCard from './WordCard';
+
+//const word = "Hello";
 class App extends Component {
   render() {
     return (
-      <div><WordCard value="1Test Commit" /></div>
+      <div><WordCard value="HALIF" /></div>
+      
+    );
+  }
+}
+*/
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header/>
+        <Content/>
+        <Footer/>
+      </div>
       
     );
   }

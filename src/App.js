@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import WordCard from './WordCard';
 import Header from './Header'
 import Serrender from './Surrender'
+import CharacterCard from './CharacterCard';
 import './App.css';
 
 const word = ['ape', 'cat', 'eat', 'zip', 'wet', 'dry', 'poll', 'pot', 'run', 'fun', 'git', 'bad', 'Hello', 'Green', 'Black', 'Pearl', 'Dense', 'sharp', 'clone', 'clear', 'steel', 'stool', 'chair', 'never']
@@ -20,8 +21,7 @@ class App extends Component {
   }
 
   getAnswer = (isSurrender) => {
-   
-
+    
   }
 
   getSurrender = (isSurrender) =>{

@@ -20,9 +20,12 @@ export default class WordCard extends Component {
         this.state = prepareStateFromWord(this.props.value)
     }
     render() {
+        if(this.props.isSurrenderConfirm){
+            this.props.getAnswer(this.state.chars.join(''))
+        }
         return (
             <div>
-                {Array.from(this.props.value).map( (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} {...this.state}/>)}
+                {Array.from(this.props.value).map( (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} isSurrenderConfirm={this.props.isSurrenderConfirm} {...this.state}/>)}
             </div>
         );
     }
